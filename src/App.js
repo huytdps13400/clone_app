@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ConnectedRouter } from 'connected-react-router';
+import { Provider } from 'react-redux';
+import { Switch } from 'react-router-dom';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import configureStore, { history } from './redux/store';
+import AppWrapper from './@jumbo/components/AppWrapper';
+import AppContextProvider from './@jumbo/components/contextProvider/AppContextProvider';
+import Routes from './routes';
+import { SnackbarProvider } from 'notistack';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const store = configureStore();
+
+const App = () => (
+  <Provider store={store}>
+    <SnackbarProvider
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}>
+      <ConnectedRouter history={history}>
+        <AppContextProvider>
+          <AppWrapper>
+            <Switch>
+              <Routes />
+            </Switch>
+          </AppWrapper>
+        </AppContextProvider>
+      </ConnectedRouter>
+    </SnackbarProvider>
+  </Provider>
+);
 
 export default App;

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Normal';
+  src: url('Fonts/Manrope-ExtraLight.eot');
+  src: url('Fonts/Manrope-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Manrope-ExtraLight.woff2') format('woff2'), url('Fonts/Manrope-ExtraLight.woff') format('woff'),
+    url('Fonts/Manrope-ExtraLight.ttf') format('truetype'),
+    url('Fonts/Manrope-ExtraLight.svg#Manrope-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Normal';
+  src: url('Fonts/Manrope-Light.eot');
+  src: url('Fonts/Manrope-Light.eot?#iefix') format('embedded-opentype'), url('Fonts/Manrope-Light.woff2') format('woff2'),
+    url('Fonts/Manrope-Light.woff') format('woff'), url('Fonts/Manrope-Light.ttf') format('truetype'),
+    url('Fonts/Manrope-Light.svg#Manrope-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Normal';
+  src: url('Fonts/Manrope-Regular.eot');
+  src: url('Fonts/Manrope-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Manrope-Regular.woff2') format('woff2'), url('Fonts/Manrope-Regular.woff') format('woff'),
+    url('Fonts/Manrope-Regular.ttf') format('truetype'), url('Fonts/Manrope-Regular.svg#Manrope-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Normal';
+  src: url('Fonts/Manrope-Bold.eot');
+  src: url('Fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'), url('Fonts/Manrope-Bold.woff2') format('woff2'),
+    url('Fonts/Manrope-Bold.woff') format('woff'), url('Fonts/Manrope-Bold.ttf') format('truetype'),
+    url('Fonts/Manrope-Bold.svg#Manrope-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Normal';
+  src: url('Fonts/Manrope-ExtraBold.eot');
+  src: url('Fonts/Manrope-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Manrope-ExtraBold.woff2') format('woff2'), url('Fonts/Manrope-ExtraBold.woff') format('woff'),
+    url('Fonts/Manrope-ExtraBold.ttf') format('truetype'), url('Fonts/Manrope-ExtraBold.svg#Manrope-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
