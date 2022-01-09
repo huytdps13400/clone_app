@@ -153,7 +153,7 @@ export default function ScrollDialog({ open, setOpen, project, name, users, hand
           <Grid xs={12} md={6} xl={8} className={classes.content}>
             <MapWidget area={project?.area} danger={project?.danger} />
           </Grid>
-          <Grid xs={12} md={12} xl={6}>
+          <Grid xs={12} md={8} xl={8}>
             <Box display="flex" alignItems="center" style={{ marginTop: 20 }} flexDirection={{ xs: 'column', sm: 'row' }}>
               <Typography component="div" variant="h4">
                 Danh sách công nhân
@@ -181,7 +181,7 @@ export default function ScrollDialog({ open, setOpen, project, name, users, hand
               </Table>
             </TableContainer>
           </Grid>
-          <Grid xs={12} md={12} xl={6} className={classes.point}>
+          <Grid xs={12} md={4} xl={4} className={classes.point}>
             <GridContainer>
               <Grid item xs={12} lg={6} className={classes.content} style={{ marginTop: 20 }}>
                 <Box display="flex" alignItems="center" marginBottom={2} flexDirection={{ xs: 'column', sm: 'row' }}>
