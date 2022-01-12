@@ -16,6 +16,9 @@ const headCells = [
   { id: 'email', numeric: false, disablePadding: false, label: 'Email' },
   { id: 'time', numeric: false, disablePadding: false, label: 'Date' },
   { id: 'phone', numeric: false, disablePadding: false, label: 'Phone' },
+  { id: 'gotoWork', numeric: false, disablePadding: false, label: 'Đi làm' },
+  { id: 'dangerArea', numeric: false, disablePadding: false, label: 'Vùng nguy hiểm' },
+  { id: 'thaoNon', numeric: false, disablePadding: false, label: 'Tháo nón' },
 ];
 
 function UserTableHead({ classes, onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort }) {

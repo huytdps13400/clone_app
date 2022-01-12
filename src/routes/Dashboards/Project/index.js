@@ -77,7 +77,6 @@ const Project = () => {
   const _handleClose = () => setOpen(false);
   const _handleAddProject = () => setIsAddProject(true);
   const _handleCloseAddProject = () => setIsAddProject(false);
-
   return (
     <React.Fragment>
       {authUser && (

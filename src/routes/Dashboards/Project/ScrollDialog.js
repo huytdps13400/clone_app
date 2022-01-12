@@ -16,6 +16,7 @@ import EditLocation from './EditLocation';
 import EditUser from './EditUser';
 import EditImgProject from './EditImgProject';
 import UserListRow from './UserListRow';
+import MaterialUIPickers from './MaterialUIPickers';
 
 const useStyles = makeStyles(theme => ({
   content: {
@@ -64,6 +65,10 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 12,
     paddingLeft: 10,
   },
+  date: {
+    // flex: '1 1 100%',
+    marginLeft: theme.spacing(20),
+  },
 }));
 
 export default function ScrollDialog({ open, setOpen, project, name, users, handleEdit, uid }) {
@@ -77,6 +82,7 @@ export default function ScrollDialog({ open, setOpen, project, name, users, hand
   const [region, setRegion] = React.useState('');
   const [isAddUser, setIsAddUser] = React.useState(false);
   const [isImgProject, setIsImgProject] = React.useState(false);
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
 
   const handleClose = () => {
     setOpen(false);
@@ -158,17 +164,28 @@ export default function ScrollDialog({ open, setOpen, project, name, users, hand
               <Typography component="div" variant="h4">
                 Danh sách công nhân
               </Typography>
+
               <Box className={classes.boxEdit} onClick={_openAddUser}>
                 <Typography className={classes.title}>+</Typography>
               </Box>
+              <Box className={classes.date}>
+                <MaterialUIPickers selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+              </Box>
             </Box>
+
             <TableContainer className={classes.container}>
               <Table stickyHeader className={classes.table} aria-labelledby="tableTitle" aria-label="sticky enhanced table">
                 <UserTableHead classes={classes} rowCount={!!project?.workers ? Object.values(project?.workers) : 0} />
                 <TableBody>
                   {!!project?.workers ? (
                     Object.values(project?.workers).map((row, index) => (
-                      <UserListRow key={index} row={row} filterUser={users} />
+                      <UserListRow
+                        key={index}
+                        row={row}
+                        filterUser={users}
+                        productID={project?.id}
+                        selectedDate={selectedDate}
+                      />
                     ))
                   ) : (
                     <TableRow style={{ height: 53 * 6 }}>
